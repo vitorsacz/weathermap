@@ -12,6 +12,8 @@ interface WeatherData {
   main: {
     temp: number;
     humidity: number;
+    temp_max: number;
+    temp_min: number;
   };
   weather: Array<{
     description: string;
@@ -78,8 +80,12 @@ export default function Home() {
               <h2 className="titulo-cidade">{dados.name}</h2>
               <div className="temp">
                 <p >{Math.floor(dados.main.temp)} °C</p>
-                <p className="umidade">Umidade: {dados.main.humidity}%</p>
-                <p className="vento">Vento: {dados.wind.speed} m/s</p>
+                <p >{dados.weather.description}</p>
+                <br />
+                <p className="dados-temp ">Max: {Math.round(dados.main.temp_max)}°C</p>
+                <p className="dados-temp ">Min: {Math.round(dados.main.temp_min)}°C</p>
+                <p className="dados-temp ">Umidade: {dados.main.humidity}%</p>
+                <p className="dados-temp ">Vento: {dados.wind.speed} m/s</p>
               </div>
 
               <div className="caixa-menor-container">
