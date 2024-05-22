@@ -17,6 +17,9 @@ interface WeatherData {
     description: string;
     icon: string;
   }>;
+  wind: Array<{
+    speed: number;
+  }>;
 }
 
 
@@ -51,19 +54,24 @@ export default function Home() {
     <main className="principal">
 
       <section className="secao-principal" >
+
         <div className="busca-cidade">
+
           <h1>De qual cidade você quer ver a previsão hoje?</h1>
+
           <div className="barra-de-pesquisa">
-            <input className="barra-de-pesquisa-text"
-              type="text"
-              id="text"
-              value={cidade}
-              onChange={(e) => setCidade(e.target.value)}
-              placeholder="EX: São Paulo"
-            />
-            <button className="barra-pesquisa-btn" onClick={cliqueiNoBotao}>
-              <Image src={Lupa} alt="Icone-Lupa"></Image>
-            </button>
+            <div className="itens-pesquisa">
+              <input className="barra-de-pesquisa-text"
+                type="text"
+                id="text"
+                value={cidade}
+                onChange={(e) => setCidade(e.target.value)}
+                placeholder="EX: São Paulo"
+              />
+              <button className="barra-pesquisa-btn" onClick={cliqueiNoBotao}>
+                <Image src={Lupa} alt="Icone-Lupa"></Image>
+              </button>
+            </div>  
           </div>
           {dados && (
             <div className="caixa-media">
@@ -71,6 +79,7 @@ export default function Home() {
               <div className="temp">
                 <p >{Math.floor(dados.main.temp)} °C</p>
                 <p className="umidade">Umidade: {dados.main.humidity}%</p>
+                <p className="vento">Vento: {dados.wind.speed} m/s</p>
               </div>
 
               <div className="caixa-menor-container">

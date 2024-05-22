@@ -32,11 +32,17 @@
     padding: 15px;
     border-radius: 40px;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    align-self: center;
 
+}
+
+.itens-pesquisa{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 ::-webkit-input-placeholder {
@@ -51,6 +57,7 @@
     font-size: 25px;
     outline: 0;
     color: white;
+    width: 100%;
 }
 
 
@@ -75,7 +82,9 @@
 
 .caixa-media {
     display: flex;
+    width: 100%;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -95,12 +104,15 @@
 }
 
 .temp p {
-    font-size: 40px;
+    font-size: 60px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
 .temp .umidade {
+    font-size: 20px;
+}
+.temp .vento {
     font-size: 20px;
 }
 
