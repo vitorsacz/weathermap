@@ -1,0 +1,135 @@
+.principal {
+    margin: 0 auto;
+    background-color: rgb(28, 102, 172);
+    margin-top: 5px;
+    width: 80%;
+    border-radius: 10px;
+    
+}
+
+
+.secao-principal {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.busca-cidade {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.busca-cidade h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.barra-de-pesquisa {
+    background-color: #00000059;
+    height: 50px;
+    padding: 15px;
+    border-radius: 40px;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+::-webkit-input-placeholder {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #aeaeae;
+}
+
+.barra-de-pesquisa-text {
+    background: transparent;
+    border: 0;
+    font-size: 25px;
+    outline: 0;
+    color: white;
+}
+
+
+.barra-pesquisa-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-style: none;
+    cursor: pointer;
+    background: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1.2s;
+}
+
+.barra-pesquisa-btn:hover {
+    transform: scale(1.2);
+}
+
+
+.caixa-media {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titulo-cidade {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+
+.temp {
+    width: 15%;
+    background-color: #cccbcb73;
+    z-index: 3;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.temp p {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.temp .umidade {
+    font-size: 20px;
+}
+
+
+.caixa-menor-container {
+   display: flex;
+   gap: 20px;
+  
+
+}
+
+.caixa-menor {
+    background-color: #cccbcb73;
+    padding: 20px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.texto-previsao {
+    text-align: center;
+}
+
+.caixa-menor .umidade {
+    text-align: center;
+}
+
