@@ -8,7 +8,7 @@ const Header = () => {
             <div className="container_cabecalho">
                 <Image src={LogoTempo} alt="imagem-logo-previsão-do-tempo" height={250} ></Image>
             </div>
-
+            <h2>Previsão do tempo</h2>
         </header>
     )
 }

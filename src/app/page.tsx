@@ -5,6 +5,7 @@ import Image from "next/image";
 import Lupa from "../../public/assets/imagens/loupe-white.svg"
 
 
+
 const key: string = "cebcd482eda57fa9a6714c1c2ba91885";
 
 interface WeatherData {
@@ -79,87 +80,18 @@ export default function Home() {
             <div className="caixa-media">
               <h2 className="titulo-cidade">{dados.name}</h2>
               <div className="temp">
-                <p >{Math.floor(dados.main.temp)} °C</p>
-                <p >{dados.weather.description}</p>
-                <br />
-                <p className="dados-temp ">Max: {Math.round(dados.main.temp_max)}°C</p>
-                <p className="dados-temp ">Min: {Math.round(dados.main.temp_min)}°C</p>
-                <p className="dados-temp ">Umidade: {dados.main.humidity}%</p>
-                <p className="dados-temp ">Vento: {dados.wind.speed} m/s</p>
+                <div>
+                  <p >{Math.floor(dados.main.temp)} °C</p>
+                  <p >{dados.weather.description}</p>
+                  <br />
+                  <p className="dados-temp ">Max: {Math.round(dados.main.temp_max)}°C</p>
+                  <p className="dados-temp ">Min: {Math.round(dados.main.temp_min)}°C</p>
+                  <p className="dados-temp ">Umidade: {dados.main.humidity}%</p>
+                  <p className="dados-temp ">Vento: {dados.wind.speed} m/s</p>
+                </div>
               </div>
 
-              <div className="caixa-menor-container">
-                <div className="caixa-menor">
-                  <p>Seg</p>
-                  <img className="img-previsao" src={`https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`} alt="icone do tempo" />
-                  <p className="texto-previsao">{dados.weather[0].description}</p>
-                  <br />
-                  <p className="temp-dias">{Math.floor(dados.main.temp)} °C</p>
-                  <br />
-                  <p className="umidade">Umidade: {dados.main.humidity}%</p>
-                </div>
-
-                <div className="caixa-menor">
-                  <p>Ter</p>
-                  <img className="img-previsao" src={`https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`} alt="icone do tempo" />
-                  <p className="texto-previsao">{dados.weather[0].description}</p>
-                  <br />
-                  <p className="temp-dias">{Math.floor(dados.main.temp)} °C</p>
-                  <br />
-                  <p className="umidade">Umidade: {dados.main.humidity}%</p>
-                </div>
-
-                <div className="caixa-menor">
-                  <p>Qua</p>
-                  <img className="img-previsao" src={`https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`} alt="icone do tempo" />
-                  <p className="texto-previsao">{dados.weather[0].description}</p>
-                  <br />
-                  <p className="temp-dias">{Math.floor(dados.main.temp)} °C</p>
-                  <br />
-                  <p className="umidade">Umidade: {dados.main.humidity}%</p>
-                </div>
-
-                <div className="caixa-menor">
-                  <p>Qui</p>
-                  <img className="img-previsao" src={`https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`} alt="icone do tempo" />
-                  <p className="texto-previsao">{dados.weather[0].description}</p>
-                  <br />
-                  <p className="temp-dias">{Math.floor(dados.main.temp)} °C</p>
-                  <br />
-                  <p className="umidade">Umidade: {dados.main.humidity}%</p>
-                </div>
-
-                <div className="caixa-menor">
-                  <p>Sex</p>
-                  <img className="img-previsao" src={`https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`} alt="icone do tempo" />
-                  <p className="texto-previsao">{dados.weather[0].description}</p>
-                  <br />
-                  <p className="temp-dias">{Math.floor(dados.main.temp)} °C</p>
-                  <br />
-                  <p className="umidade">Umidade: {dados.main.humidity}%</p>
-                </div>
-
-                <div className="caixa-menor">
-                  <p>Sab</p>
-                  <img className="img-previsao" src={`https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`} alt="icone do tempo" />
-                  <p className="texto-previsao">{dados.weather[0].description}</p>
-                  <br />
-                  <p className="temp-dias">{Math.floor(dados.main.temp)} °C</p>
-                  <br />
-                  <p className="umidade">Umidade: {dados.main.humidity}%</p>
-                </div>
-
-                <div className="caixa-menor">
-                  <p>Dom</p>
-                  <img className="img-previsao" src={`https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`} alt="icone do tempo" />
-                  <p className="texto-previsao">{dados.weather[0].description}</p>
-                  <br />
-                  <p className="temp-dias">{Math.floor(dados.main.temp)} °C</p>
-                  <br />
-                  <p className="umidade">Umidade: {dados.main.humidity}%</p>
-                </div>
-
-              </div>
+              
 
             </div>
           )}
